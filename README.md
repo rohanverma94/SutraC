@@ -6,16 +6,16 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 
 ### Requirements ###
 
-*  LLVM 6.0 (Build files included in projeet)
+*  LLVM 6.0 (Build files included in project)
 *  Linux x64 
 *  AMD64 ABI
 
 
 ### How to get started? ###
 
-* Setup & Install LLVM 6.0
-* Also setup clang , compiler-rt , dragonegg, libcxx, libcxxabi, libunwind, lld, lldb,openmp & polly
-* C++ 14 enabled compiler (GCC g++)
+* Setup & Install LLVM 6.0.
+* Also setup clang , compiler-rt , dragonegg, libcxx, libcxxabi, libunwind, lld, lldb,openmp & polly.
+* C++ 14 enabled compiler (GCC g++).
 * Build SutraC as follows:  
 ```
 		$ git clone --recursive https://chakraoverflow@bitbucket.org/tnnc/sutrac.git
@@ -27,8 +27,8 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 ```
 ### Contribution guidelines ###
 
-* For unit testing prefer catch framework
-* The code with third-party libraries other than LLVM libraries is not accepeted
+* For unit testing prefer catch framework.
+* The code with third-party libraries other than LLVM libraries is not accepeted.
 
 ### Communications to authors ###
 
