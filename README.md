@@ -9,7 +9,7 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 *  LLVM 6.0 (Build scripts included in project)
 *  Linux 64 bit, preferable CentOS 7 64 bit.
 *  AMD64 ABI. Can be found [here](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf).
-*  C++ 14 enabled compiler (<= g++ 4.8.5).
+*  C++ 14 enabled compiler (>= g++ 4.8.5).
 *  LLVM requires CMake 3.4.3 to build
 *  For more info look at [LLVM DOCS](https://llvm.org/docs/GettingStarted.html).
 
