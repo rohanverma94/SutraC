@@ -9,7 +9,7 @@ cd llvm-project/
 git clone --branch="release_60" https://github.com/llvm-mirror/llvm.git
 
 if [ $? -eq 0 ]; then
-    echo "LLVM sucessfully installed."
+    echo "LLVM sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -18,7 +18,7 @@ fi
 git clone --branch="release_60" https://github.com/llvm-mirror/clang.git
 
 if [ $? -eq 0 ]; then
-    echo "Clang sucessfully installed."
+    echo "Clang sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -29,14 +29,14 @@ git clone --branch="release_60" https://github.com/llvm-mirror/libcxx.git
 if [ $? -eq 0 ]; then
     echo "libcxx suucessfully cloned."
 else 
-    echo "Try script installed"
+    echo "Try script again"
     exit 1
 fi
 
 git clone --branch="release_60" https://github.com/llvm-mirror/lldb.git
 
 if [ $? -eq 0 ]; then
-    echo "lldb sucessfully installed."
+    echo "lldb sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -45,7 +45,7 @@ fi
 git clone --branch="release_60" https://github.com/llvm-mirror/compiler-rt.git
 
 if [ $? -eq 0 ]; then
-    echo "compiler-rt sucessfully installed."
+    echo "compiler-rt sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -54,7 +54,7 @@ fi
 git clone --branch="release_60" https://github.com/llvm-mirror/lld.git
 
 if [ $? -eq 0 ]; then
-    echo "lld sucessfully installed."
+    echo "lld sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -62,7 +62,7 @@ fi
 
 git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
 if [ $? -eq 0 ]; then
-    echo "Polly sucessfully installed."
+    echo "Polly sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -71,7 +71,7 @@ fi
 git clone --branch="release_60" https://github.com/llvm-mirror/libunwind.git
 
 if [ $? -eq 0 ]; then
-    echo "libunwind sucessfully installed."
+    echo "libunwind sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -80,7 +80,7 @@ fi
 git clone --branch="release_60" https://github.com/llvm-mirror/dragonegg.git
 
 if [ $? -eq 0 ]; then
-    echo "dragonegg sucessfully installed."
+    echo "dragonegg sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -88,7 +88,7 @@ fi
 
 git clone --branch="release_60" https://github.com/llvm-mirror/libcxxabi.git
 if [ $? -eq 0 ]; then
-    echo "libcxxabi sucessfully installed."
+    echo "libcxxabi sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -97,7 +97,7 @@ fi
 git clone --branch="release_60" https://github.com/llvm-mirror/openmp.git
 
 if [ $? -eq 0 ]; then
-    echo "openmp sucessfully installed."
+    echo "openmp sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -110,7 +110,7 @@ make
 sudo make install
 
 if [ $? -eq 0 ]; then
-    echo "openmp sucessfully installed."
+    echo "LLVM sucessfully installed."
 else 
     echo "Try script again"
     exit 1
