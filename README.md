@@ -2,7 +2,7 @@
 
 SutraC is compiler for TNNL language. 
 
-![Sutralogo](logo.jpg)  
+![Sutralogo](misc/logo.jpg)  
 
 ### What is this repository for? ###
 
