@@ -14,9 +14,9 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 ### How to get started? ###
 
 * Setup & Install LLVM 6.0
-* Also setup clang , clang-tools-extra, compiler-rt , dragonegg, libcxx, libcxxabi, libunwind, lld, lldb,openmp & polly
+* Also setup clang , compiler-rt , dragonegg, libcxx, libcxxabi, libunwind, lld, lldb,openmp & polly
 * C++ 14 enabled compiler (GCC g++)
-* Build it as follows:  
+* Build SutraC as follows:  
 ```
 
 		$ mkdir build & cd build  
