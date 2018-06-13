@@ -1,6 +1,6 @@
 # README #
 
-SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Language. This repository has compiler for the TNNL language 
+SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for The Neural Network Language. This repository has compiler for the TNNL language 
 
 ![Sutralogo](misc/logo.jpg)  
 
