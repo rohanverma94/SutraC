@@ -1,31 +1,34 @@
 # README #
 
-SutraC is compiler for TNNL language. 
+SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Language. This repository is compiler for thte TNNL language 
 
 ![Sutralogo](misc/logo.jpg)  
 
-### What is this repository for? ###
+### Requirements ###
 
-* The TNNL stands for The Neural Network Language. This repository is compiler for thte TNNL language  
-* Version 0.1
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+*  LLVM 6.0 (Build files included in projeet)
+*  Linux x64 
+*  AMD64 ABI
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### How to get started? ###
+
+* Setup & Install LLVM 6.0
+* Also setup clang , clang-tools-extra, compiler-rt , dragonegg, libcxx, libcxxabi, libunwind, lld, lldb,openmp & polly
+* C++ 14 enabled compiler (GCC g++)
+* Build it as follows: 
+		* mkdir build & cd build
+		* cmake ..
+		* make
+		* make install
+ 
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* For unit testing prefer catch framework
+* The code with third-party libraries other than LLVM libraries is not accepeted
 
-### Who do I talk to? ###
+### Communications to authors ###
 
-* Repo owner or admin
-* Other community or team contact
+* Rohan Verma :- rohanverma2@acm.org
+* Ashwin Vijayakumar
