@@ -7,14 +7,6 @@ fi
 cd llvm-project/
 
 
-git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
-
-if [ $? -eq 0 ]; then
-    echo "Polly sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
-fi
 
 git clone --branch="release_60" https://github.com/llvm-mirror/llvm.git
 
@@ -47,6 +39,14 @@ git clone --branch="release_60" https://github.com/llvm-mirror/lld.git
 
 if [ $? -eq 0 ]; then
     echo "lld sucessfully cloned."
+else 
+    echo "Try script again"
+    exit 1
+fi
+git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
+
+if [ $? -eq 0 ]; then
+    echo "Polly sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
