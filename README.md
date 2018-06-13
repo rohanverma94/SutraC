@@ -27,7 +27,7 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 ```
 ### Contribution guidelines ###
 
-* For unit testing prefer catch framework.
+* For unit testing prefer catch2 framework. Can be found [here](https://github.com/catchorg/Catch2) 
 * The code with third-party libraries other than LLVM libraries is not accepeted.
 
 ### Communications to authors ###
