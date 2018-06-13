@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.4.3)
+project (sutrac)
+set(SOURCES sutra-core/sutra-compiler.cpp)
+set(CMAKE_CXX_FLAGS "-Wall")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+add_executable(sutrac ${SOURCES})
