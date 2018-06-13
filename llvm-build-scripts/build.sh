@@ -6,6 +6,16 @@ if [ ! -d $PWD/llvm-project ]; then
 fi
 cd llvm-project/
 
+
+git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
+
+if [ $? -eq 0 ]; then
+    echo "Polly sucessfully cloned."
+else 
+    echo "Try script again"
+    exit 1
+fi
+
 git clone --branch="release_60" https://github.com/llvm-mirror/llvm.git
 
 if [ $? -eq 0 ]; then
@@ -15,6 +25,7 @@ else
     exit 1
 fi
 
+cd llvm/tools
 git clone --branch="release_60" https://github.com/llvm-mirror/clang.git
 
 if [ $? -eq 0 ]; then
@@ -23,29 +34,10 @@ else
     echo "Try script again"
     exit 1
 fi
-
-git clone --branch="release_60" https://github.com/llvm-mirror/libcxx.git
-
-if [ $? -eq 0 ]; then
-    echo "libcxx suucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
 git clone --branch="release_60" https://github.com/llvm-mirror/lldb.git
 
 if [ $? -eq 0 ]; then
     echo "lldb sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-git clone --branch="release_60" https://github.com/llvm-mirror/compiler-rt.git
-
-if [ $? -eq 0 ]; then
-    echo "compiler-rt sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -60,9 +52,31 @@ else
     exit 1
 fi
 
-git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
+cd clang/tools
+git clone --branch="release_60" https://github.com/llvm-mirror/clang-tools-extra.git
 if [ $? -eq 0 ]; then
-    echo "Polly sucessfully cloned."
+    echo "Clang-tools sucessfully cloned."
+else 
+    echo "Try script again"
+    exit 1
+fi
+
+cd ../../../projects
+git clone --branch="release_60" https://github.com/llvm-mirror/libcxx.git
+
+if [ $? -eq 0 ]; then
+    echo "libcxx suucessfully cloned."
+else 
+    echo "Try script again"
+    exit 1
+fi
+
+
+
+git clone --branch="release_60" https://github.com/llvm-mirror/compiler-rt.git
+
+if [ $? -eq 0 ]; then
+    echo "compiler-rt sucessfully cloned."
 else 
     echo "Try script again"
     exit 1
@@ -103,145 +117,14 @@ else
     exit 1
 fi
 
-cd llvm/
+cd ..
 mkdir build && cd build
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 make
 sudo make install
 
 if [ $? -eq 0 ]; then
-    echo "LLVM sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd clang/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "clang sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd lld/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "lld sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd lldb/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "lldb sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd libunwind/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "libunwind sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd openmp/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "openmp sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd polly/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "polly sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-
-cd libcxx/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "libcxx sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd libcxxabi/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "libcxxabi sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd compiler-rt/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "compiler-rt sucessfully installed."
-else 
-    echo "Try script again"
-    exit 1
-fi
-
-cd dragonegg/
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-
-if [ $? -eq 0 ]; then
-    echo "dragonegg sucessfully installed."
+    echo "LLVM & Tools sucessfully installed."
 else 
     echo "Try script again"
     exit 1
