@@ -22,7 +22,8 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 ### Language Specification ###
 
 * Check docs in repositorty  
-### Build SutraC, LLVM and other projects as follows ###  
+### Build SutraC, LLVM and other projects as follows ###
+
 ```
 		$ git clone --recursive https://chakraoverflow@bitbucket.org/tnnc/sutrac.git
 		$ cd llvm-build-scripts
