@@ -35,7 +35,7 @@ SutraC is compiler for TNNL language. The TNNL stands for The Neural Network Lan
 		$ cd llvm-build-scripts
 		$ sh build.sh
 		$ cd ..
-		$ mkdir build & cd build  
+		$ mkdir build && cd build  
 		$ cmake ..  
 		$ make  
 		$ make install  
