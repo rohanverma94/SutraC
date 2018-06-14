@@ -36,11 +36,19 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 		$ sh build.sh
 		$ cd ..
 		$ mkdir build && cd build  
-		$ cmake ..  
+		$ cmake ..  -DCMAKE_INSTALL_PREFIX:PATH=../_install
 		$ make  
 		$ make install  
  
 ```
+
+### Internal Testing ###
+
+* For purpose of internal testing the install directory is sutrac/_install/.
+* The unit testing framework used is catch2. Can be found [here](https://github.com/catchorg/Catch2) .
+* Make the test cases with caution, always make all them in separate test directory.
+* Also label the test by creating a subdirectory in test directory with the name of the test.
+* Always use loose coupling in test, explained [here](https://bulldogjob.com/articles/971-on-dependency-injection-loose-coupling-and-unit-tests-in-c).
 
 ### Usage ###
 ```
@@ -50,8 +58,8 @@ $ sutrac <source-file> -o <output-executable>
 ### Contribution guidelines ###
 
 * Code should be compliant with C++14 standard.
-* For unit testing prefer catch2 framework. Can be found [here](https://github.com/catchorg/Catch2) 
-* The code with third-party libraries other than LLVM libraries is not accepeted.
+* For unit testing prefer catch2 framework. 
+* The code with third-party libraries other than Catch2 and LLVM libraries is not accepeted.
 
 ### Submitting Bugs ###
 
