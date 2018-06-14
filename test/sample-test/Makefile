@@ -1,7 +1,7 @@
 
 CC = g++
 
-CFLAGS  = -Wall -std=c++1y
+CFLAGS  = -Wall -std=c++1y #C++14 standard 
 
   # the build target executable:
 TARGET = factorial_test
