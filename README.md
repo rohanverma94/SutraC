@@ -50,6 +50,16 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 * Also label the test by creating a subdirectory in test directory with the name of the test.
 * Always use loose coupling in test, explained [here](https://bulldogjob.com/articles/971-on-dependency-injection-loose-coupling-and-unit-tests-in-c).
 
+## Build Status ##
+
+* The build status can be one of ```abandoned``` , ```passing``` and ```release```
+* Look at example below for build report:
+
+| OS | Kernel | CPU  | GPU  | Status  |
+|----|--------|------|------|---------|
+|  CentOS7  |    3.13    |   Core i5 4460  |  GT 710    | passing|
+
+
 ### Usage ###
 ```
 $ sutrac <source-file> -o <output-executable>
