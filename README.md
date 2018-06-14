@@ -30,8 +30,18 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 
 ### Build SutraC, LLVM and other projects as follows ###
 
+* In case of RedHat based system (Cent OS 7 etc )do following
+
+```sudo yum-builddep -y llvm clang```
+
+* In case of Debain based systems( Ubuntu , mint etc) do following
+
+```sudo apt-get build-dep llvm   
+   sudo apt-get build-dep clang```
+
 ```
 		$ git clone --recursive https://chakraoverflow@bitbucket.org/tnnc/sutrac.git
+		$ cd sutrac
 		$ cd llvm-build-scripts
 		$ sh build.sh
 		$ cd ..
@@ -50,15 +60,10 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 * Also label the test by creating a subdirectory in sutrac/test directory with the name of the test.
 * Always use loose coupling in test, explained [here](https://bulldogjob.com/articles/971-on-dependency-injection-loose-coupling-and-unit-tests-in-c).
 
-## Build Status ##
+### Build Status ###
 
 * The build status can be one of ```abandoned``` , ```passing``` and ```release```
-* Look at example below for build report:
-
-| OS | Kernel | CPU  | Runtime Memory(in-use)  | Status  |
-|----|--------|------|------|---------|
-|  CentOS 7  |    3.13    |   Core i5 4460  |  90MB    | passing|
-
+* Look at example in reports directory.
 * All build reports should be in sutrac/report directory.
 
 ### Usage ###

@@ -91,7 +91,7 @@ else
     exit 1
 fi
 
-git clone --branch="release_60" https://github.com/llvm-mirror/dragonegg.git
+git clone https://github.com/llvm-mirror/dragonegg.git
 
 if [ $? -eq 0 ]; then
     echo "dragonegg sucessfully cloned."
@@ -130,9 +130,9 @@ cmake -G "Unix Makefiles" -DCMAKE_EXPORT_COMPILE_COMMANDS=On \
 -DLIBCXX_ENABLE_EXCEPTIONS=On \
 -DLIBCXX_ENABLE_RTTI=On \
 -DCMAKE_POLICY_DEFAULT_CMP0056=NEW \
--DCMAKE_POLICY_DEFAULT_CMP0058=NEW -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+-DCMAKE_POLICY_DEFAULT_CMP0058=NEW -DLLDB_DISABLE_PYTHON=1 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 
-make
+make -j ${CPUS} ${VERBOSE}
 sudo make install
 
 if [ $? -eq 0 ]; then
