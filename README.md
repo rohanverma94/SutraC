@@ -46,8 +46,8 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 
 * For purpose of internal testing the install directory is sutrac/_install/.
 * The unit testing framework used is catch2. Can be found [here](https://github.com/catchorg/Catch2) .
-* Make the test cases with caution, always make all them in separate test directory.
-* Also label the test by creating a subdirectory in test directory with the name of the test.
+* Make the test cases with caution, always make all them in sutrac/test directory.
+* Also label the test by creating a subdirectory in sutrac/test directory with the name of the test.
 * Always use loose coupling in test, explained [here](https://bulldogjob.com/articles/971-on-dependency-injection-loose-coupling-and-unit-tests-in-c).
 
 ## Build Status ##
@@ -57,8 +57,9 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 
 | OS | Kernel | CPU  | Runtime Memory(in-use)  | Status  |
 |----|--------|------|------|---------|
-|  CentOS7  |    3.13    |   Core i5 4460  |  90MB    | passing|
+|  CentOS 7  |    3.13    |   Core i5 4460  |  90MB    | passing|
 
+* All build reports should be in sutrac/report directory.
 
 ### Usage ###
 ```
