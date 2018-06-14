@@ -33,23 +33,23 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 * In case of RedHat based system (Cent OS 7 etc )do following
 
 
-		```
+```
 		 sudo yum-builddep -y llvm clang 
 		 
-		 ```
+```
 
 
 * In case of Debain based systems( Ubuntu , mint etc) do following
 
 
 		
-		``` 
+```
 		sudo apt-get build-dep llvm   
    		sudo apt-get build-dep clang 
 		
-		```
+```
 
-
+Next procedure for build proceeds like following:
 
 ```
 		$ git clone --recursive https://chakraoverflow@bitbucket.org/tnnc/sutrac.git
