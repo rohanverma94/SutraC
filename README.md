@@ -32,15 +32,12 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 
 * In case of RedHat based system (Cent OS 7 etc )do following
 
-
 ```
 		 sudo yum-builddep -y llvm clang 
 		 
 ```
 
-
 * In case of Debain based systems( Ubuntu , mint etc) do following
-
 
 		
 ```
@@ -48,15 +45,23 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
    		sudo apt-get build-dep clang 
 		
 ```
-
-Next procedure for build proceeds like following:
+Cloning repository for SutraC as follows:
 
 ```
 		$ git clone --recursive https://chakraoverflow@bitbucket.org/tnnc/sutrac.git
-		$ cd sutrac
-		$ cd llvm-build-scripts
+
+```
+1. Building LLVM & other projects:
+
+```		
+		$ cd <project_root_directory>/llvm-build-scripts
 		$ sh build.sh
-		$ cd ..
+
+```
+2. Building SutraC:
+
+``` 
+		$ cd <project_root_directory>
 		$ mkdir build && cd build  
 		$ cmake ..  -DCMAKE_INSTALL_PREFIX:PATH=../_install
 		$ make  

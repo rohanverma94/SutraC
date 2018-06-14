@@ -7,118 +7,151 @@ fi
 cd llvm-project/
 
 
+if [ ! -d $PWD/llvm ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/llvm.git
 
-git clone --branch="release_60" https://github.com/llvm-mirror/llvm.git
-
-if [ $? -eq 0 ]; then
-    echo "LLVM sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+    if [ $? -eq 0 ]; then
+        echo "LLVM sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
 cd llvm/tools
-git clone --branch="release_60" https://github.com/llvm-mirror/clang.git
 
-if [ $? -eq 0 ]; then
-    echo "Clang sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
-fi
-git clone --branch="release_60" https://github.com/llvm-mirror/lldb.git
+if [ ! -d $PWD/clang ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/clang.git
 
-if [ $? -eq 0 ]; then
-    echo "lldb sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+    if [ $? -eq 0 ]; then
+        echo "Clang sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
-git clone --branch="release_60" https://github.com/llvm-mirror/lld.git
+if [ ! -d $PWD/lldb ]; then    
+    git clone --branch="release_60" https://github.com/llvm-mirror/lldb.git
 
-if [ $? -eq 0 ]; then
-    echo "lld sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+    if [ $? -eq 0 ]; then
+        echo "lldb sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
-git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
 
-if [ $? -eq 0 ]; then
-    echo "Polly sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+if [ ! -d $PWD/lld ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/lld.git
+
+    if [ $? -eq 0 ]; then
+        echo "lld sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
+fi
+
+if [ ! -d $PWD/polly ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/polly.git
+
+    if [ $? -eq 0 ]; then
+        echo "Polly sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
 cd clang/tools
-git clone --branch="release_60" https://github.com/llvm-mirror/clang-tools-extra.git
-if [ $? -eq 0 ]; then
-    echo "Clang-tools sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+
+if [ ! -d $PWD/clang-tools-extra ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/clang-tools-extra.git
+    if [ $? -eq 0 ]; then
+        echo "Clang-tools sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
 cd ../../../projects
-git clone --branch="release_60" https://github.com/llvm-mirror/libcxx.git
 
-if [ $? -eq 0 ]; then
-    echo "libcxx suucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+if [ ! -d $PWD/libcxx ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/libcxx.git
+
+    if [ $? -eq 0 ]; then
+        echo "libcxx sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
 
+if [ ! -d $PWD/compiler-rt ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/compiler-rt.git
 
-git clone --branch="release_60" https://github.com/llvm-mirror/compiler-rt.git
-
-if [ $? -eq 0 ]; then
-    echo "compiler-rt sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+    if [ $? -eq 0 ]; then
+        echo "compiler-rt sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
-git clone --branch="release_60" https://github.com/llvm-mirror/libunwind.git
+if [ ! -d $PWD/libunwind ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/libunwind.git
 
-if [ $? -eq 0 ]; then
-    echo "libunwind sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+    if [ $? -eq 0 ]; then
+        echo "libunwind sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
-git clone https://github.com/llvm-mirror/dragonegg.git
+if [ ! -d $PWD/dragonegg ]; then
+    git clone https://github.com/llvm-mirror/dragonegg.git
 
-if [ $? -eq 0 ]; then
-    echo "dragonegg sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+    if [ $? -eq 0 ]; then
+        echo "dragonegg sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
-git clone --branch="release_60" https://github.com/llvm-mirror/libcxxabi.git
-if [ $? -eq 0 ]; then
-    echo "libcxxabi sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+if [ ! -d $PWD/libcxxabi ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/libcxxabi.git
+    if [ $? -eq 0 ]; then
+        echo "libcxxabi sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
-git clone --branch="release_60" https://github.com/llvm-mirror/openmp.git
 
-if [ $? -eq 0 ]; then
-    echo "openmp sucessfully cloned."
-else 
-    echo "Try script again"
-    exit 1
+if [ ! -d $PWD/openmp ]; then
+    git clone --branch="release_60" https://github.com/llvm-mirror/openmp.git
+
+    if [ $? -eq 0 ]; then
+        echo "openmp sucessfully cloned."
+    else 
+        echo "Try script again"
+        exit 1
+    fi
 fi
 
 cd ..
-mkdir build && cd build
+if [ ! -d $PWD/build ]; then
+    mkdir build 
+    echo "Creating build directory for LLVM."
+fi
+
+cd build
 cmake -G "Unix Makefiles" -DCMAKE_EXPORT_COMPILE_COMMANDS=On \
 -DBUILD_SHARED_LIBS=On \
 -DLLVM_ENABLE_LIBCXX=On \
