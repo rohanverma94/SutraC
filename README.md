@@ -55,9 +55,9 @@ SutraC is compiler for TNNL language. The TNNL(pronounced as TuNNeL) stands for 
 * The build status can be one of ```abandoned``` , ```passing``` and ```release```
 * Look at example below for build report:
 
-| OS | Kernel | CPU  | GPU  | Status  |
+| OS | Kernel | CPU  | Runtime Memory(in-use)  | Status  |
 |----|--------|------|------|---------|
-|  CentOS7  |    3.13    |   Core i5 4460  |  GT 710    | passing|
+|  CentOS7  |    3.13    |   Core i5 4460  |  90MB    | passing|
 
 
 ### Usage ###
