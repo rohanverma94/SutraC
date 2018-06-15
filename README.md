@@ -51,14 +51,14 @@ Cloning repository for SutraC as follows:
 		$ git clone --recursive https://chakraoverflow@bitbucket.org/tnnc/sutrac.git
 
 ```
-1. Building LLVM & other projects:
+##### Building LLVM & other projects: #####
 
 ```		
 		$ cd <project_root_directory>/llvm-build-scripts
 		$ sh build.sh
 
 ```
-2. Building SutraC:
+##### Building SutraC: #####
 
 ``` 
 		$ cd <project_root_directory>
